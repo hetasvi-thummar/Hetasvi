@@ -1,0 +1,204 @@
+<html>
+<head>
+    <title>
+        Practicle 3
+</title>
+<script src="https://kit.fontawesome.com/a076d05399.js"></script>
+<link rel="stylesheet" type="text/css" href="css/stylesheet1.css">
+
+<body>
+<!-- Div 1 start here -->
+<div class="maindiv1">
+    <div class="logodiv"><img src="images\i2.png" style="width: 25%; height: 95%;"></div>
+    <div class="searchtextdiv"><input type="text" id="sname" value="Search" size="80%"></div>
+    <div class="uploadbutton">
+        <button type="button" class="buttoncss">Upload</button>
+        <button type="button" class="buttoncss">Notification</button>
+        <button type="button" class="buttoncss">Setting</button>
+    </div>
+</div>
+<!-- Div 1 ends here -->
+
+<!-- Div 2 Starts here -->
+<div class="homebuttons">
+    <div style="padding: 10px;">
+        <i class="fa fa-home" aria-hidden="true"></i>
+            <label for="home">Home</label></br></br>
+        <i class="fa fa-user-circle" aria-hidden="true"></i>
+            <label for="my channel">My Channel</label></br></br>
+        <i class="fas fa-poll"></i>
+            <label for="trending">Trending</label></br></br>
+        <i class="fa fa-bell" aria-hidden="true"></i>
+            <label for="subscription">Subscription</label></br></br>
+        <i class="fa fa-history" aria-hidden="true"></i>
+            <label for="hisatory">History</label></br></br>
+        <i class="fab fa-algolia"></i>
+            <label for="watch later">Watch Later</label>
+    </div>
+
+    <div>
+        <!-- <label for="Subscriptions">Subscriptoins</label> -->
+    </div>
+
+
+
+</div>
+<!-- Div 2 Ends Here -->
+
+<!-- Div 3 Statrs here -->
+<div class="htsbuttons">
+    <!-- <div style="padding: 5px; margin-left: 15px;">
+        <button type="button" class="buttoncss1">Home</button>
+        <button type="button" class="buttoncss1">Trending</button>
+        <buttlabelrecommon type="button" class="buttoncss1">Subscription</button>
+    </div> -->
+    <!-- <div>
+        <img src="images/adv2.jpeg" style="height: 25%; width: 80%; margin: 5px 5px 5px 5px; padding: 20px;">
+    </div> -->
+    <div style=" height: 30%; width: 100%; background: whitesmoke;">
+    <div class="slideshow-container">
+    
+        <div class="mySlides fade">
+            <div class="numbertext">1 / 3</div>
+            <img src="images/adv1.png" style="width:100%; height:100%">
+            <!-- <div class="text">Caption Text</div> -->
+        </div>
+    
+        <div class="mySlides fade">
+            <div class="numbertext">2 / 3</div>
+            <img src="images/adv2.jpeg" style="width:100%; height: 100%">
+            <!-- <div class="text">Caption Two</div> -->
+        </div>
+    
+        <div class="mySlides fade">
+            <div class="numbertext">3 / 3</div>
+            <img src="images/adv4.png" style="width:100%; height: 100%">
+            <!-- <div class="text">Caption Three</div> -->
+        </div>
+    
+    </div>
+    <br>
+    
+     <div style="text-align:center">
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+    </div> 
+    </div>
+    <script>
+        var slideIndex = 0;
+        showSlides();
+
+        function showSlides() {
+            var i;
+            var slides = document.getElementsByClassName("mySlides");
+            var dots = document.getElementsByClassName("dot");
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            slideIndex++;
+            if (slideIndex > slides.length) { slideIndex = 1 }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndex - 1].style.display = "block";
+            dots[slideIndex - 1].className += " active";
+            setTimeout(showSlides, 2000); // Change image every 2 seconds
+        }
+    </script>
+
+    <div style=" height: 100%; width: 100%;  background:whitesmoke;">
+    </br>
+        <div>
+            <label for="recommended" class="labelrecomm">Recommended</label>
+        </div>
+        <br></br>
+        
+            <div class="videodiv" style="margin-left: 20px;">
+            <video width="100%" height="90%" controls>
+                <source src="videos/video1.mp4" type="video/mp4">
+            </video></br>
+            <div>
+                <label for="video1" style="font-weight: bolder;">Wild life:life from depth of see</label>
+            </div>
+            </div>
+        
+
+        <div class="videodiv" style="margin-left: 20px;">
+            <video width="100%" height="90%" controls>
+                <source src="videos/video2.mp4" type="video/mp4">
+            </video>
+        </br>
+            <label for="video2" style="font-weight: bolder;">life from forest:how they live</label>
+        </div>
+
+        <div class="videodiv"  style="margin-left: 20px;">
+            <video width="100%" height="90%" controls>
+                <source src="videos/video3.mp4" type="video/mp4">
+            </video>
+        </br>
+
+            <label for="video3" style="font-weight: bolder">The Nest: lives their lives beyond land.</label>
+        </div>
+
+        <div class="videodiv" style="margin-left: 20px;">
+            <video width="100%" height="90%" controls>
+                <source src="videos/video4.mp4" type="video/mp4">
+            </video>
+            </br>
+
+            <label for="video4" style="font-weight: bolder">squirells and their own life.</label>  
+        </div></br>
+    
+<!-- Div 3 Ends here -->
+
+<!-- Div 4 starts here -->
+    <div> 
+             <div>
+                <label for="recently uploaded" class="labelrecomm">Recently Uploaded</label>
+            </div>
+        
+
+        <div class="videodiv">
+            <video width="100%" height="90%" controls>
+                <source src="videos/video1.mp4" type="video/mp4">
+            </video>
+            </br>
+
+            <label for="video1" style="font-weight: bolder;">Wild life:life from depth of see</label>
+        </div>
+
+        <div class="videodiv">
+            <video width="100%" height="90%" controls>
+                <source src="videos/video2.mp4" type="video/mp4">
+            </video>
+            </br>
+
+            <label for="video2" style="font-weight: bolder;">life from forest:how they live</label>
+        </div>
+
+        <div class="videodiv">
+            <video width="100%" height="90%" controls>
+                <source src="videos/video3.mp4" type="video/mp4">
+            </video>
+            </br>
+
+            <label for="video3" style="font-weight: bolder">The Nest: lives their lives beyond land.</label>
+        </div>
+
+        <div class="videodiv">
+            <video width="100%" height="90%" controls>
+                <source src="videos/video4.mp4" type="video/mp4">
+            </video>
+        </br>
+
+            <label for="video4" style="font-weight: bolder">squirells and their own life.</label>
+        </div>
+    </div>
+</div>
+</div>
+
+  <!-- Div 4 Ends Here  -->
+</body>
+</head>
+</html>

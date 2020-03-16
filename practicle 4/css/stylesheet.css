@@ -1,0 +1,285 @@
+.header
+{
+    height: 8%;
+    width: 100%;
+    background-color: black;
+    float: left;
+}
+
+.leftdiv
+{
+    width: 25%;
+    height:80%;
+    /* border: 1px solid black; */
+    float: left;
+    margin-right: 60px;
+    
+}
+.rightdiv
+{
+    width: 25%;
+    height: 80%;
+    float: left;
+}
+
+.middlediv
+{
+    width: 40%;
+    height:80%;
+    /* border: 1px solid black; */
+    float: left;
+    margin-right: 60px;
+    
+
+}
+
+.imagediv2
+{
+    width: 39%;
+    height: 90%;
+    /* border: 1px solid black; */
+    float: left;
+    
+}
+
+
+.saleimage
+{
+    /* border: 1px solid black; */
+    height: 80%;
+    margin: 5px;
+}
+
+.saleimage1
+{
+    margin: 2px;
+    height: 99%;
+    width: 99%;
+    
+    
+}
+
+.saleimage2
+{
+    /* border: 1px solid black; */
+    height: 15%;
+    width: 20%;
+    margin: 8px 0px 0px 5px;
+}
+
+.saleimage2-1
+{
+    
+    height: 99%;
+    width: 99%;
+    
+}
+.dot
+{
+    height: 98%;
+    width: 10%;
+    
+
+}
+
+.dot1
+{
+    height: 80%;
+    width: 40%;
+    float: right;
+}
+
+.labeldiv
+{
+    border-bottom: 1px solid black;
+    margin: 2px;
+    height: 20%;
+    
+}
+.labeldivprize
+{
+    /* border: 1px solid black; */
+    margin: 2px;
+    height: 10%;
+    
+}
+.labeldiv1
+{
+    /* border: 1px solid black; */
+    font-size:xx-large;    
+    height: 50%; 
+    padding-top: 5px;
+    
+}
+
+.labeldiv2
+{
+    /* border: 1px solid black; */
+    font-size: medium;
+    color: purple;
+    height: 40%;
+}
+
+.paradiv
+{
+ /* border: 1px solid black; */
+ margin: 2px;
+ height: 65%;
+ 
+}
+.paradivp
+{
+    font-style: italic;
+    line-height: 30px;
+    
+}
+.paradiv1
+{
+ /* border: 1px solid black; */
+ margin: 2px;
+ height: 85%;
+ 
+ 
+}
+
+.adddiv
+{
+    /* border: 1px solid black; */
+    margin: 2px;
+    height: 10%;
+     
+}
+.addbuttondiv
+{
+       float: right;
+    /* border: 1px solid black; */
+    height: 80%;
+    width: 40%;
+    text-align: right;
+    
+}
+
+.plusbuttondiv
+{
+    float: left;
+    /* border: 1px solid black; */
+    height: 70%;
+    width: 50%;
+    text-align: center;
+    padding-top: 15px;
+
+    
+}
+
+.label-1
+{
+    background-color: gray;
+    padding: 8px;
+}
+.addbutton 
+{
+    background-color: purple; /* Green */
+    border: none;
+    color: white;
+    padding: 12px 30px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+  }
+
+.cartdiv
+{
+    border-bottom: 1px solid black;
+    height: 10%;
+    padding: 5px 0px 5px 0px;
+    font-size: large;
+    font-weight: bold;
+    text-align: left;
+    
+
+}
+.product1
+{
+    border-bottom: 1px solid black; 
+    height: 20%;
+    margin: 2px;
+}
+
+.p1
+{
+    /* border: 1px solid black; */
+    width: 50%;
+    height: 98%;
+    float: left;
+    
+    
+    
+    
+}
+
+.p2
+{
+    /* border: 1px solid black; */
+    width: 30%;
+    height: 98%;
+    float: right;
+}
+.product2
+{
+    border-bottom: 1px solid black; 
+    height: 20%;
+    margin: 2px;
+}
+.totaldiv
+{
+    border-bottom: 1px solid black; 
+    height: 10%;
+    margin-top: 10px;
+    text-align: center;
+}
+.checkout
+{
+    /* border: 1px solid black; */
+    height: 10%;
+    margin-top: 15px;
+}
+
+.co1
+{
+    /* border: 1px solid black; */
+    height: 90%;
+    width: 40%;
+    float: left;
+    text-align: right;
+}
+
+.co2
+{
+    /* border: 1px solid black; */
+    height: 90%;
+    width: 50%;
+    float: right;
+    text-align: left;
+}
+
+.viewbutton 
+{
+    background-color:black;/* Green */
+    border: none;
+    color: white;
+    padding: 12px 30px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+
+  }
+  .footer
+{
+    height: 8%;
+    width: 100%;
+    /* border: 1px solid black; */
+    float: left;
+   text-align: center;
+}

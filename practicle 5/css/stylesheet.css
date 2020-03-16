@@ -1,0 +1,295 @@
+
+
+
+.flex-container 
+{
+    border: 1px solid black;
+    display: flex;
+    padding: 2px;
+    flex-wrap: wrap;
+    align-items: center;
+    margin:2px;
+}
+
+.header
+{
+    border: 1px solid black;
+    padding: 2px;
+    justify-content: space-between;
+    margin-bottom: 5px;
+    
+}
+
+
+
+
+.header-left
+{
+    /* border: 1px solid black; */
+    /* padding: 2px; */
+    padding-left: 10px;
+}
+
+.header-right
+{
+    /* border: 1px solid black; */
+    /* padding: 2px; */
+    /* font-size: small; */
+    padding-right: 50px;
+    
+}
+.left-image
+{
+    height: 70px;
+    width: 100px;
+}
+.navigation
+{
+    border: 1px solid black;
+    padding: 2px;
+    justify-content: center;
+    margin-bottom: 5px;
+
+}
+
+@media only screen and (max-width: 375px) 
+{
+    .navigation
+    {
+        
+        padding: 2px;
+        justify-content: center;
+        margin-bottom: 5px;
+        flex-direction: column;
+    
+    }  
+}
+.links
+{
+    margin: 8px;
+}
+
+
+.bodydiv 
+{
+    /* border: 1px solid black; */
+    margin: 2px; 
+    padding: 2px;
+    /* justify-content: space-between; */
+    
+}
+
+
+
+
+
+
+.article1
+{
+    border: 1px solid black;
+    padding: 2px;
+    margin: 0px 5px 10px 0px; 
+}
+
+@media only screen and (max-width: 375px) 
+{
+    .article1
+{
+    border: 1px solid black;
+    padding: 2px;
+    margin: 0px 0px 10px 0px; 
+}
+}
+
+@media only screen and (max-width: 425px) 
+{
+    .article1
+{
+    border: 1px solid black;
+    padding: 2px;
+    margin: 0px 0px 10px 0px; 
+}
+}
+.articlepara
+{
+    font-size: medium;
+    line-height: 30px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+/* @media only screen and (max-width: 786px) 
+{
+    .articlepara
+{
+    font-size: medium;
+    line-height: 20px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+} */
+.article2
+{
+    border: 1px solid black;
+    padding: 2px;
+    margin: 0px 5px 5px 0px; 
+}
+
+@media only screen and (max-width: 375px) 
+{
+    .article2
+{
+    border: 1px solid black;
+    padding: 2px;
+    margin: 0px 0px 10px 0px; 
+}
+}
+
+@media only screen and (max-width: 425px) 
+{
+    .article2
+{
+    border: 1px solid black;
+    padding: 2px;
+    margin: 0px 0px 10px 0px; 
+}
+}
+.widget1
+{
+    border: 1px solid black;
+    padding: 2px;
+    margin: 0px 0px 5px 0px;
+}
+
+
+.widget2
+{
+    border: 1px solid black;
+    padding: 2px;
+    margin: 0px 0px 5px 0px; 
+}
+
+.widget3
+{
+    border: 1px solid black;
+    padding: 2px;
+}
+
+.widgetimage
+{
+    width: 250px;
+    height: 140px;
+}
+
+@media only screen and (min-width: 320px) and (max-width:374px) 
+{
+    .widgetimage
+    {
+    width: 295px;
+    height: 140px;
+    }
+
+}
+@media only screen and (min-width: 375px) and (max-width:424px) 
+{
+    .widgetimage
+    {
+    width: 350px;
+    height: 140px;
+    }
+
+}
+@media only screen and (min-width: 425px) and (max-width:767px)
+{
+    .widgetimage
+    {
+    width: 396px;
+    height: 140px;
+    }
+
+}
+
+@media only screen and (min-width: 768px) and (max-width:1023px)
+{
+    .widgetimage
+    {
+    width: 300px;
+    height: 252px;
+    }
+
+}
+
+@media only screen and (min-width: 1024px) and (max-width:1439px)
+{
+    .widgetimage
+    {
+    width: 300px;
+    height: 173px;
+    }
+
+}
+
+.footer
+{
+    /* border: 1px solid black; */
+    /* margin: 2px; */
+    /* padding: 2px; */
+}
+.footerdiv
+{
+    border: 1px solid black;
+    margin: 2px;
+    text-align: center;
+    
+}
+
+.articles-container
+{
+    display: flex;
+    flex-direction: row;
+    margin: 2px;
+}
+@media only screen and (max-width: 375px) 
+{
+    .articles-container
+    {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+@media only screen and (max-width: 425px) 
+{
+    .articles-container
+    {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+.sidebar
+{
+    display: flex;
+    flex-direction: column;
+    margin: 2px;
+}
+
+@media only screen and (max-width: 375px) 
+{
+    .sidebar
+{
+    display: flex;
+    flex-direction: column;
+    margin: 2px;
+    align-items: center;
+}
+}
+@media only screen and (max-width: 425px) 
+{
+    .sidebar
+{
+    display: flex;
+    flex-direction: column;
+    margin: 2px;
+    
+}
+}
+
