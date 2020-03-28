@@ -367,6 +367,7 @@ textarea {
 
 .header{
     background-image: url('/images/header.png');
+    background-size: 100% 100%;
 
 }
 .btn 
@@ -392,9 +393,21 @@ textarea {
 .bannervideo
 {
     background-image: url('/images/banner.png');
+    background-size: 100% 100%;
 }
 
 .button
 {
     background: none;
 }
+
+.sbar{
+    background-color: tomato !important;
+}
+
+.bg-image{
+    background-image: url('/images/footer1.png');
+    background-size: 100% 100%;
+    
+}
+
