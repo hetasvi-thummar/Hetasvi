@@ -410,4 +410,11 @@ textarea {
     background-size: 100% 100%;
     
 }
-
+.main-bgimage{
+    background-image: url('/images/background.png');
+    background-size: 100% 100%  ;
+}
+ .footer-bgimage{
+     background-image: url('/images/footerbg.png');
+     background-size: 100% 100%;
+ }
