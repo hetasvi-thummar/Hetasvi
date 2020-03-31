@@ -412,7 +412,8 @@ textarea {
 }
 .main-bgimage{
     background-image: url('/images/background.png');
-    background-size: 100% 100%  ;
+    background-position-x: center; 
+    background-position-y: center;
 }
  .footer-bgimage{
      background-image: url('/images/footerbg.png');
