@@ -17,36 +17,36 @@
         alert(employee.ename);
         alert(employee.salary);
 
-        // // example of boolean value
-        // let employee1 = {
-        //     ename: "ram",
-        //     salary: 10000,
-        //     likes birds:true,
-        // };
+        // example of boolean value
+          employee = {
+            ename: "ram",
+            salary: 10000,
+             likes_birds:true,
+         };
         
-        // alert(employee1["likes birds"]);
+         alert(employee["likes_birds"]);
 
 
         // example of access by variables
-        let employee1 = {
+         employee = {
             ename: "ram",
             salry: 10000
             };
 
         let key = prompt("What do you want to know about the user?", "ename");
-        alert( employee1[key] ); 
+        alert( employee[key] ); 
 
         // example of dot notation
-        let employee2 = {
+         employee = {
             ename: "ram",
             salary: 10000
             };
 
-        let key1 = "ename";
-        alert( employee2.key );
+        key = "ename";
+        alert( employee.key );
 
         // example of key in object
-        let employee3 = { ename: "ram", salary: 10000 };
+         employee = { ename: "ram", salary: 10000 };
 
         alert( "salary" in employee ); 
         alert( "blabla" in employee ); 
@@ -57,7 +57,7 @@
         // this.likes birds = false;
         }
 
-        let employee4 = new Employee("ram");
+        employee = new Employee("ram");
 
         alert(employee.ename); 
         
@@ -93,16 +93,13 @@
         alert( Math.floor(num * 100) / 100 );
 
         // example of method n
-        let num1 = 12.34;
-        alert( num1.toFixed(1) );
+        num = 12.34;
+        alert( num.toFixed(1) );
 
-        // example of math.round
-        let num2 = 12.36;
-        alert( num2.toFixed(1) );
 
         // example of t0fixed
-        let num3 = 12.34;
-        alert( num3.toFixed(5) ); 
+        num = 12.34;
+        alert( num.toFixed(5) ); 
 
         // example of string with backticks
         function sum(a, b) {
