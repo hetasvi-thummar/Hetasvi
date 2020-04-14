@@ -6,36 +6,24 @@
     <title>Practicle 10</title>
 </head>
 <body>
-    <script src="./js/javascript1.js"></script>
-    <!-- example of getelementbyid -->
+    
+<!-- example of getelementbyid -->
+  
+<div id="elem">
+    <div id="elem-content">Element</div>
+  </div>
 
-    <div id="elem">
-        <div id="elem-content">Element</div>
-    </div>
-<script>
-    let elem = document.getElementById('elem');
-    elem.style.background = 'green';
-     elem = 5; 
-    alert(elem); 
-</script>
 
 <!-- example of queryselectorAll -->
 
 <ul>
-<li>hello</li>
-<li>world</li>
+  <li>hello</li>
+  <li>world</li>
 </ul>
 <ul>
-<li>i m</li>
-<li>here</li>
+  <li>i m</li>
+  <li>here</li>
 </ul>
-<script>
-let elements = document.querySelectorAll('ul > li:first-child');
-
-for (let elem of elements) {
-  alert(elem.innerHTML); 
-}
-</script>
 
 <!-- example of queryselector closest -->
 
@@ -47,15 +35,6 @@ for (let elem of elements) {
  <li class="chapter">Chapter 1</li>
 </ul>
 </div>
-
-<script>
-let chapter = document.querySelector('.chapter'); 
-
-alert(chapter.closest('.book')); 
-alert(chapter.closest('.contents')); 
-
-alert(chapter.closest('h1')); 
-</script>
 
 <!-- example of getelementsbytagname -->
 
@@ -77,93 +56,96 @@ alert(chapter.closest('h1'));
     </tr>
   </table>
   
-  <script>
-    let inputs = table.getElementsByTagName('input');
-  
-    for (let input of inputs) {
-      alert( input.value + ': ' + input.checked );
-    }
-  </script>
-
-<!-- example of Getelementbyname and class name -->
+  <!-- example of Getelementbyname and class name -->
 
 <form name="my-form">
     <div class="article">Article</div>
     <div class="long article">Long article</div>
-  </form>
+</form>
   
-  <script>
-    // find by name attribute
-    let form = document.getElementsByName('my-form')[0];
+<!-- example of classname  -->
   
-    // find by class inside the form
-    let articles = form.getElementsByClassName('article');
-    alert(articles.length); 
-  </script>
+<div class="page"></div>
 
-  <!-- example of classname  -->
-  
-  <body class="page">
-    <script>
-      alert(document.body.className); 
-    </script>
-  </body>
+<!-- example of classlist -->
 
-  <!-- example of classlist -->
+<div class="page"></div>
 
-  <body class="page">
-    <script>
-      
-    document.body.classList.add('article');
-    alert(document.body.className); 
-    document.body.style.backgroundColor = prompt('background color?', 'green');
+<!-- example of resetting style -->
 
-    </script>
-  </body>
+<div id="div">Button</div>
 
-  <!-- example of resetting style -->
-
-  <div id="div">Button</div>
-
-    <script>
-        div.style.cssText=`color: red !important;
-        background-color: yellow;
-        width: 100px;
-        text-align: center;`;
-
-    alert(div.style.cssText);
-    </script>
-
-<!-- example of mind the units -->
-
-
-    <script>
-      // doesn't work!
-      document.body.style.margin = 20;
-      alert(document.body.style.margin); 
-  
-      // now add the CSS unit (px) - and it works
-      document.body.style.margin = '20px';
-      alert(document.body.style.margin); 
-  
-      alert(document.body.style.marginTop); 
-      alert(document.body.style.marginLeft); 
-    </script>
+<!-- example of GetcomputedStyle -->
+  <div>
+    <style> div { color: red; margin: 5px } </style>
+  </div>
+  <div>
+     The red text
+  </div>
     
-    <!-- example of GetcomputedStyle -->
 
-    <head>
-        <style> body { color: red; margin: 5px } </style>
-      </head>
-  <body>
-  The red text
+<script>
 
-  <script>
-    alert(document.body.style.color); 
-    alert(document.body.style.marginTop); 
-  </script>
-    </body>
+  let elem = document.getElementById('elem');
+  elem.style.background = 'green';
+  elem = 5; 
+  alert(elem); 
+
+  let elements = document.querySelectorAll('ul > li:first-child');
+
+  for (let elem of elements) {
+  alert(elem.innerHTML); 
+  }
+
+  let chapter = document.querySelector('.chapter'); 
+
+  alert(chapter.closest('.book')); 
+  alert(chapter.closest('.contents')); 
+
+  alert(chapter.closest('h1')); 
+
+  let inputs = table.getElementsByTagName('input');
+  
+  for (let input of inputs) {
+  alert( input.value + ': ' + input.checked );
+  }
+
+  // find by name attribute
+  let form = document.getElementsByName('my-form')[0];
+  
+  // find by class inside the form
+  let articles = form.getElementsByClassName('article');
+  alert(articles.length); 
+
+  alert(document.body.className); 
+
     
+  document.body.classList.add('article');
+  alert(document.body.className); 
+  document.body.style.backgroundColor = prompt('background color?', 'green');
+
+  div.style.cssText=`color: red !important;
+  background-color: yellow;
+  width: 100px;
+  text-align: center;`;
+
+  alert(div.style.cssText);
+
+  // doesn't work!
+  document.body.style.margin = 20;
+  alert(document.body.style.margin); 
+  
+  // now add the CSS unit (px) - and it works
+  document.body.style.margin = '20px';
+  alert(document.body.style.margin); 
+  
+  alert(document.body.style.marginTop); 
+  alert(document.body.style.marginLeft); 
+
+  alert(document.body.style.color); 
+  alert(document.body.style.marginTop); 
+  
+</script>
 
 </body>
 </html>
