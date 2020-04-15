@@ -366,12 +366,12 @@ textarea {
 }
 
 body{
-    background-image: url('/images/banner.png');
+    background-image: url('images/banner.png');
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: center center;
     background-size: cover;
-    background-image: -webkit-linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(/images/banner.png);
+    background-image: -webkit-linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(images/banner.png);
     
 }
 
@@ -503,7 +503,7 @@ a{
     
 }
 .learnmore:after {
-    background-image: url(/images/arrow.svg);
+    background-image: url(images/arrow.svg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
@@ -655,7 +655,7 @@ ul > li > a{
 }
 
 a.menutoggle:after {
-    background-image: url('/images/bars.svg');
+    background-image: url('images/bars.svg');
     background-position: right center;
     background-repeat: no-repeat;
     content: '';
