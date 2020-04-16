@@ -1,0 +1,19 @@
+.intro {
+    font-size: 150%;
+    color: red;
+}
+
+.display { 
+    display: block;
+    border: 2px solid lightgrey;
+    color: black;
+    padding: 5px;
+    margin: 15px;
+}
+
+.div{
+    border: 1px solid black;
+    width: 30%;
+    text-align: center;
+    padding: 10px;
+}

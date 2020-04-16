@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practicle 12</title>
+    <link rel="stylesheet" href="/css/stylesheet.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    </head>
+<body class="display">body (great-garandparent)
+
+<!-- example of append() -->
+<h3>1.append()</h3>
+<div class="div"> 
+<p id="p1">Hello</p>
+<button id="btn1">Append text</button>
+</div>
+
+
+<!-- example of prepend() -->
+<h3>2.prepend()</h3>
+<div class="div">
+<p id="p2">Hello</p>
+<button id="btn2">Prepend text</button><br></br>
+</div>
+
+
+<!-- example of before()  -->
+<h3>3.before()</h3>
+<div class="div">
+<img src="../images/div1.png" alt="image1" width="100" height="140" id="img1"><br>
+<button id="btn3">Insert before</button>
+</div>
+
+
+
+<!-- example of css() -->
+<h3>4.css()</h3>
+<div class="div">
+<p id="p3">Hello.</p>
+<button id="btn4">Set background-color of p</button>
+</div><br></br>
+
+
+<!-- example of remove() -->
+<h3>5.remove()</h3>
+<div class="div">
+<div id="div1" style="height:100px;width:300px;border:1px solid black;background-color:yellow;">
+    <p>Hello</p>
+</div>
+<br>
+<button id="btn5">Remove div element</button>
+</div><br></br>
+
+
+<!-- example of empty() -->
+<h3>6.empty()</h3>
+<div class="div">
+<div id="div2" style="height:100px;width:300px;border:1px solid black;background-color:yellow;">
+    <p>Hello</p>
+</div>
+<br>
+<button id="btn6">empty div element</button>
+</div>
+
+
+
+<!-- example of add() -->
+<h3>7.add()</h3>
+<div class="div">
+<h1 id="h1">Welcome</h1>
+<p id="p4">Hello.</p>
+<p id="p4">World.</p>
+</div>
+
+
+<!-- example of addclass() -->
+<h3>8.addClass()</h3>
+<div class="div">
+<h1 id="h2">Hello</h1>
+<p id="p5">This is a paragraph.</p>
+<button id="btn7">Add a class name </button>
+</div><br></br>
+
+
+<!-- example of attr() -->
+<h3>9.attr()</h3>
+<div class="div">
+<img src="../images/div2.png" alt="image2" width="284" height="213" id="img2"><br>
+<button id="btn8">Set the width attribute of the image</button>
+</div>
+
+
+<!-- example of appendTo() -->
+<h3>10.appendTo()</h3>
+<div class="div">
+<p id="p6">hello</p>
+
+<button id="btn9">Insert span element at the end of each p element</button>
+</div><br></br>
+
+
+<!-- example of change() -->
+<h3>11.change()</h3>
+<div class="div">
+<input type="text" id="input1">
+<p id="p7">click outside</p>
+</div><br></br>
+
+
+<!-- example of children() -->
+<h3>12.children()</h3>
+<div class="div">
+<div style="width:500px;">div (grandparent)
+    <ul>ul (direct parent)  
+      <li id="li1">li (child)
+        <span>span (grandchild)</span>
+      </li>
+    </ul>   
+</div>
+</div>
+
+
+<!-- example of click() -->
+<h3>13.click()</h3>
+<div class="div">
+<button id="btn10">Click</button>
+</div>
+
+
+<!-- example of clone() -->
+<h3>14.clone()</h3>
+<div class="div">
+<h1 id="h3">Hello</h1>
+<h1>world</h1>
+<button id="btn11">Clone all h1 elements</button>
+</div>
+
+
+<!-- example of each() -->
+<h3>15.each()</h3>
+<div class="div">
+<ul id="ul1">
+    <li>Apple</li>
+    <li>Banana</li>
+    <li>Graps</li>
+</ul>
+<button id="btn12">show value of each list item</button>
+</div>
+
+
+<!-- example of hasClass() -->
+<script>
+
+$(document).ready(function(){
+    $("#btn1").click(function(){
+    $("#p1").append(" <b>hello</b>.");
+    });
+});
+
+$(document).ready(function(){
+    $("#btn2").click(function(){
+    $("#p2").prepend(" <b>hello</b>.");
+    });
+});
+
+$(document).ready(function(){
+    $("#btn3").click(function(){
+    $("#img1").before("<b>Before</b>");
+    });
+});
+
+$(document).ready(function(){
+    $("#btn4").click(function(){
+    $("#p3").css("background-color", "yellow");
+    });
+});
+
+
+$(document).ready(function(){
+    $("#btn5").click(function(){
+    $("#div1").remove();
+    });
+});
+
+$(document).ready(function(){
+    $("#btn6").click(function(){
+    $("#div2").empty();
+    });
+});
+
+$(document).ready(function(){
+    $("#h1").add("#p4").css("background-color", "yellow");
+});
+
+$(document).ready(function(){
+    $("#btn7").click(function(){
+    $("#p5").addClass("intro");
+    });
+});
+
+$(document).ready(function(){
+    $("#btn8").click(function(){
+    $("#img2").attr("width", "400");
+    });
+});
+
+$(document).ready(function(){
+    $("#btn9").click(function(){
+    $("<span>Hello</span>").appendTo("#p6");
+    });
+});
+
+$(document).ready(function(){
+    $("#input1").change(function(){
+    alert("The text has been changed.");
+    });
+});
+
+$(document).ready(function(){
+    $("#li1").children().css({"color": "red", "border": "2px solid red"});
+});
+
+$(document).ready(function(){
+    $("#btn10").click(function(){
+    alert("The button was clicked.");
+    });
+});
+
+$(document).ready(function(){
+    $("#btn11").click(function(){
+    $("#h3").clone().appendTo("body");
+    });
+});
+
+$(document).ready(function(){
+    $("#btn12").click(function(){
+    $("#ul1").each(function(){
+    alert($(this).text())
+    });
+    });
+});
+</script>
+
+
+</body>
+</html>
