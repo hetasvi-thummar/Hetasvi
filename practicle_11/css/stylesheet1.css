@@ -368,12 +368,20 @@ textarea {
 /* Stylesheet starts here */
 
 body{
+<<<<<<< HEAD
     background-image: url('..images/banner.png'); 
+=======
+    background-image: url('../images/banner.png');
+>>>>>>> 44b8472d652f8fbc891b5e66c566a9df6f6227b1
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: center center;
     background-size: cover;
+<<<<<<< HEAD
     background-image: -webkit-linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(..images/banner.png);
+=======
+    background-image: -webkit-linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(../images/banner.png);
+>>>>>>> 44b8472d652f8fbc891b5e66c566a9df6f6227b1
     
 }
 
