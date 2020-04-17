@@ -80,7 +80,7 @@
 <div class="div">
 <h1 id="h2">Hello</h1>
 <p id="p5">This is a paragraph.</p>
-<button id="btn7">Add a class name </button>
+<button id="btn7">Add a class</button>
 </div><br></br>
 
 
@@ -112,7 +112,7 @@
 <!-- example of children() -->
 <h3>12.children()</h3>
 <div class="div">
-<div style="width:500px;">div (grandparent)
+<div style="width:400px;">div (grandparent)
     <ul>ul (direct parent)  
       <li id="li1">li (child)
         <span>span (grandchild)</span>
@@ -131,7 +131,7 @@
 
 <!-- example of clone() -->
 <h3>14.clone()</h3>
-<div class="div">
+<div class="div" id="div3">
 <h1 id="h3">Hello</h1>
 <h1>world</h1>
 <button id="btn11">Clone all h1 elements</button>
@@ -151,6 +151,114 @@
 
 
 <!-- example of hasClass() -->
+<h3>16.hasClass()</h3>
+<div class="div">
+    <p class="intro" id="p7">i am engineer</p>
+    <p id="p7">i am also engineer</p>
+    <button id="btn13">is there an "intro" class?</button>
+</div>
+
+<!-- example of hide() and show() -->
+<h3>17.hide() and show()</h3>
+<div class="div">
+    <p id="p8">Hello World</p>
+    <button id="btn14">Hide</button>
+    <button id="btn15">Show</button>
+</div>
+
+<!-- example of keydown() and keyup() -->
+<h3>18.keydown() and keyup()</h3>
+<div class="div">
+    <p>Enter your name:</p> <input type="text" id="input2">
+    <p>It will change background color on keydown and keyup.</p>
+</div>
+
+<!-- example of mousedown() and mouseup() -->
+<h3>19.mousedown() and mouseup()</h3>
+<div class="div">
+    <div id="div4">Press down and up the mouse button</div>
+</div>
+
+<!-- example of mouseenter() and mouseleave()-->
+<h3>20.mouseenter() and mouseleave() </h3>
+<div class="div">
+    <p id="p9">Move the mouse pointer</p>
+</div>
+
+<!-- example of mouseover() and mouseout() -->
+<h3>21.mouseover() and mouseout()</h3>
+<div class="div">
+    <p id="p10">Move the mouse pointer</p>
+</div>
+
+<!-- example of on() -->
+<h3>22.on()</h3>
+<div class="div">
+    <p id="p11">Click Here</p>
+</div>
+
+<!-- example of parent() -->
+<h3>23.parent()</h3>
+<div class="div">
+    <div style="width:400px;">div (great-grandparent)
+        <ul>ul (grandparent)  
+          <li>li (direct parent)
+            <span>span</span>
+          </li>
+        </ul>   
+    </div>
+</div>
+
+<!-- example of ready() -->
+<h3>24.ready()</h3>
+<div class="div">
+    <p id="p12">hello</p>
+    <button id="btn16"> slide up and slide down for a p element</button>
+</div>
+
+<!-- example of removeAttr() -->
+<h3>25.removeAttr()</h3>
+<div class="div">
+    <p id="p13" style="color: blue;">Hello world</p>
+    <button id="btn17">Remove the style attribute</button>
+</div>
+
+<!-- example of removeclass() -->
+<h3>26.removeclass()</h3>
+<div class="div">
+    <p id="p14" class="intro">Hello world</p>
+    <button id="btn18">Remove the "intro" class</button>
+</div>
+
+<!-- example of text() -->
+<h3>27. text()</h3>
+<div class="div">
+    <button id="btn19">Set text for  p elements</button>
+    <p id="p15">This is p element.</p>
+</div>
+
+<!-- example of toggle() -->
+<h3>28.toggle()</h3>
+<div class="div">
+    <p id="p16">Hello world</p>
+    <button id="btn20">Toggle between hide and show</button>
+</div>
+
+<!-- example of val() -->
+<h3>29.val()</h3>
+<div class="div">
+    <p> Enter Name:<input id="input4" type="text" name="user"></p>
+    <button id="btn21">Set the value of the input field</button>
+</div>
+
+<!-- example of keypress() -->
+<h3>30.keypress()</h3>
+<div class="div">
+  Enter your name: <input id="input5" type="text">
+  <p>Keypresses: <span id="s1">0</span></p>
+</div>
+
+<!-- Scripts starts here -->
 <script>
 
 $(document).ready(function(){
@@ -230,7 +338,7 @@ $(document).ready(function(){
 
 $(document).ready(function(){
     $("#btn11").click(function(){
-    $("#h3").clone().appendTo("body");
+    $("#h3").clone().appendTo("#div3");
     });
 });
 
@@ -241,7 +349,112 @@ $(document).ready(function(){
     });
     });
 });
+
+$(document).ready(function(){
+    $("#btn13").click(function(){
+    alert($("#p7").hasClass("intro"));
+    });
+});
+
+$(document).ready(function(){
+  $("#btn14").click(function(){
+    $("#p8").hide();
+  });
+  $("#btn15").click(function(){
+    $("#p8").show();
+  });
+});
+
+$(document).ready(function(){
+    $("#input2").keydown(function(){
+        $("#input2").css("background-color", "yellow");
+    });
+    $("#input2").keyup(function(){
+        $("#input2").css("background-color", "pink");
+    });
+});
+
+$(document).ready(function(){
+  $("#div4").mouseup(function(){
+    $(this).after("<p style='color:red;'>Mouse button pressed up.</p>");
+  });
+  $("#div4").mousedown(function(){
+    $(this).after("<p style='color:yellow;'>Mouse button pressed down.</p>");
+  });
+});
+
+$(document).ready(function(){
+  $("#p9").mouseenter(function(){
+    $("#p9").css("background-color", "yellow");
+  });
+  $("#p9").mouseleave(function(){
+    $("#p9").css("background-color", "whitesmoke");
+  });
+});
+
+$(document).ready(function(){
+  $("#p10").mouseover(function(){
+    $("#p10").css("background-color", "yellow");
+  });
+  $("#p10").mouseout(function(){
+    $("#p10").css("background-color", "lightgray");
+  });
+});
+
+$(document).ready(function(){
+  $("#p11").on("click", function(){
+    alert("you clicked here.");
+  });
+});
+
+$(document).ready(function(){
+  $("span").parent().css({"color": "red", "border": "2px solid red"});
+});
+
+$(document).ready(function(){
+  $("#btn16").click(function(){
+    $("#p12").slideToggle();
+  });
+});
+
+$(document).ready(function(){
+  $("#btn17").click(function(){
+    $("#p13").removeAttr("style");
+  });
+});
+
+$(document).ready(function(){
+  $("#btn18").click(function(){
+    $("#p14").removeClass("intro");
+  });
+});
+
+$(document).ready(function(){
+  $("#btn19").click(function(){
+    $("#p15").text("Hello world!");
+  });
+});
+
+$(document).ready(function(){
+  $("#btn20").click(function(){
+    $("#p16").toggle();
+  });
+});
+
+$(document).ready(function(){
+  $("#btn21").click(function(){
+    $("#input4:text").val("Hello World");
+  });
+});
+
+i = 0;
+$(document).ready(function(){
+  $("#input5").keypress(function(){
+    $("#s1").text(i += 1);
+  });
+});
 </script>
+
 
 
 </body>
