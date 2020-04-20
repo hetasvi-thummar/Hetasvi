@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Practicle_13</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" type="text/css" href="css/stylesheet1.css"/>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  </head>
+  
+  <body>
+    <div>
+        <table id="dashboard">
+            <tr>
+                <td id="b1" onclick="text('b1')">&nbsp;</td>
+                <td id="b2" onclick="text('b2')">&nbsp;</td>
+                <td id="b3" onclick="text('b3')">&nbsp;</td>
+            </tr>
+            <tr>
+                <td id="b4" onclick="text('b4')">&nbsp;</td>
+                <td id="b5" onclick="text('b5')">&nbsp;</td>
+                <td id="b6" onclick="text('b6')">&nbsp;</td>
+            </tr>
+            <tr>
+                <td id="b7" onclick="text('b7')">&nbsp;</td>
+                <td id="b8" onclick="text('b8')">&nbsp;</td>
+                <td id="b9" onclick="text('b9')">&nbsp;</td>
+            </tr>
+        </table>
+        
+    </div>  
+
+
+
+    <!-- Optional JavaScript -->
+    <script>
+
+        var currenttext = "";   
+        function text(id)
+        {
+            var element= document.getElementById(id);
+            element.innerText="x";
+            if (currenttext =="x"){
+                element.innerText = "0";
+            
+            }
+            else{
+                element.innerText="x";
+            }
+            currenttext = element.innerText;
+            winner();
+        }    
+
+        
+
+        
+
+        
+        function winner(){
+            var box1 = $("#b1").text().trim();
+            var box2 = $("#b2").text().trim();
+            var box3 = $("#b3").text().trim();
+            var box4 = $("#b4").text().trim();
+            var box5 = $("#b5").text().trim();
+            var box6 = $("#b6").text().trim();
+            var box7 = $("#b7").text().trim();
+            var box8 = $("#b8").text().trim();
+            var box9 = $("#b9").text().trim();
+            
+            if(box1 != "" && box2 != "" && box3!= ""){
+                if  ((box1==box2)&&(box2==box3)) { alert(box3 + " is the winner"); }
+            }
+            if(box4 != "" && box5 != "" && box6 != ""){
+                if ((box4==box5)&&(box5==box6)) { alert(box6 + " is the winner"); }
+            }
+            if(box7 != "" && box8 != "" && box9 != ""){
+                if ((box7==box8)&&(box8==box9)) { alert (box9 + " is the winner"); }
+            }
+            if(box1!= "" && box4 != "" && box7 != ""){
+                if ((box1==box4)&&(box4==box7)) { alert (box7 + " is the winner"); }
+            }
+            if(box2!= "" && box5 != "" && box8 != ""){
+                if ((box2==box5)&&(box5==box8)) { alert (box8 + " is the winner"); }
+            }
+            if(box3!= "" && box6 != "" && box9 != ""){
+                if ((box3==box6)&&(box6==box9)) { alert (box9 + " is the winner"); }
+            }
+            if(box1!= "" && box5 != "" && box9 != ""){
+                if ((box1==box5)&&(box5==box9)) { alert (box9 + " is the winner"); }
+            }
+            if(box3 != "" && box5 != "" && box7 != ""){
+                if ((box3==box5)&&(box5==box7)) { alert (box7 + " is the winner"); }
+            }
+        }   
+            
+            
+        
+
+        
+    </script>
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </body>
+</html>
