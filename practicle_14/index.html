@@ -66,24 +66,6 @@
                     </div>
                 </div>
 
-                <div id="hiddenDiv" style="display: none;">
-                    <div class="row pb-3">
-                        <div class="col-sm-5">
-                            <select class="form-control">
-                                <option>Assets Name</option>
-                            </select>
-                        </div>
-                        <div class="col-sm-5">
-                            <input type="text" aria-label="#" class="form-control">
-                        </div>
-                        <div class="col-sm-2">
-                            <button type="button" onclick="removeFunction(this)" class="btn btn-primary btnminus"><i class="fas fa-minus"></i></button>
-
-                        </div>
-                    </div>
-                </div>
-
-
                 <div class="row mt-4">
                     <div class="col-sm-12">
                         <button type="submit" class="btn btn-primary">Submit</button>
@@ -91,8 +73,6 @@
                     </div>
                 </div>
             </form>
-
-
         </div>
     </div>
 
@@ -108,14 +88,16 @@
             });
         });
 
-        function removeFunction(buttonElement) {
-            buttonElement.parentElement.parentElement.remove()
+        function removeFunction(id) {
+            $("#" + id).remove();
         }
 
         $(document).ready(function() {
+            var id = 0;
+
             $("#btnadd").click(function() {
-                var data = $("#hiddenDiv").html();
-                $("#parentDiv").append(data);
+                $("#parentDiv").append('<div id="parentDiv"> <div class="row pb-3" id="' + id + '"> <div class="col-sm-5"> <select class="form-control"> <option>Assets Name</option> </select> </div> <div class="col-sm-5"> <input type="text" aria-label="#" class="form-control"> </div> <div class="col-sm-2"> <button id="btnadd" type="button"  onclick="removeFunction(' + id + ')" class="btn btn-primary"><i class="fas fa-minus"></i></button> </div> </div> </div>');
+                id++;
             });
         });
     </script>
