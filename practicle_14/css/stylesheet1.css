@@ -1,0 +1,17 @@
+.container {
+    display: flex;
+    background: #fff;
+    /* align-content: center; */
+    /* justify-content: center; */
+    flex-direction: column; 
+    /* min-width: 700px;
+    min-height: 500px;
+     */
+    margin: 40px;
+    padding: 10px;
+  }
+  
+  .maindiv{
+    background-color:whitesmoke;
+    padding: 5px;
+  }
