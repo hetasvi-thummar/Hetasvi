@@ -60,7 +60,7 @@
                             <input type="text" aria-label="#" class="form-control">
                         </div>
                         <div class="col-sm-2">
-                            <button id="btnadd" type="button" class="btn btn-primary"><i class="fas fa-plus"></i></button>
+                            <button id="btnAdd" type="button" class="btn btn-primary"><i class="fas fa-plus"></i></button>
 
                         </div>
                     </div>
@@ -95,8 +95,8 @@
         $(document).ready(function() {
             var id = 0;
 
-            $("#btnadd").click(function() {
-                $("#parentDiv").append('<div id="parentDiv"> <div class="row pb-3" id="' + id + '"> <div class="col-sm-5"> <select class="form-control"> <option>Assets Name</option> </select> </div> <div class="col-sm-5"> <input type="text" aria-label="#" class="form-control"> </div> <div class="col-sm-2"> <button id="btnadd" type="button"  onclick="removeFunction(' + id + ')" class="btn btn-primary"><i class="fas fa-minus"></i></button> </div> </div> </div>');
+            $("#btnAdd").click(function() {
+                $("#parentDiv").append(' <div class="row pb-3" id="' + id + '"> <div class="col-sm-5"> <select class="form-control"> <option>Assets Name</option> </select> </div> <div class="col-sm-5"> <input type="text" aria-label="#" class="form-control"> </div> <div class="col-sm-2"> <button id="btnadd" type="button"  onclick="removeFunction(' + id + ')" class="btn btn-primary"><i class="fas fa-minus"></i></button> </div> ');
                 id++;
             });
         });
