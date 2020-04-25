@@ -126,21 +126,22 @@
 
         function showChecked() {
             document.getElementById("count").textContent = "Total count : " + document.querySelectorAll("input:checked").length;
-
+            copyText();
         }
 
         document.getElementById('Text1').oninput = function() {
-            debugger;
-            var textboxes = $(".change");
-            var selectedcheckboxs = document.querySelectorAll("input:checked");
-            console.log(selectedcheckboxs)
-            for (var selectedcheckbox of selectedcheckboxs) {
-                console.log(selectedcheckbox.checked)
-                if (selectedcheckbox.checked) {
-                    var txtid = selectedcheckbox.id.split("chk")[1];
-                    $("#txt" + txtid).val(this.value);
-                }
+            copyText();
+        }
 
+        function copyText() {
+            var checkboxs = document.querySelectorAll("input[name=Assets]");
+            for (var checkbox of checkboxs) {
+                var txtid = checkbox.id.split("chk")[1];
+                if (checkbox.checked) {
+                    $("#txt" + txtid).val($("#Text1").val());
+                } else {
+                    $("#txt" + txtid).val("");
+                }
             }
         }
     </script>
