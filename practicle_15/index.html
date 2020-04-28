@@ -9,28 +9,37 @@
 
 </head>
 
-<br>
-<input type="text" id="name">
-<input type="text" id="body"> <br></br>
+<br> R_body:
+<span id="R_body"></span><br></br>
+<input type="text" id="title" placeholder="title please">
+<input type="text" id="body_text" placeholder="Description"> <br></br>
 <button>Submit</button>
 
 <script>
     $(document).ready(function() {
+
+        $.get("http://jsonplaceholder.typicode.com/posts", function(data, status) {
+            console.log(data);
+            data.each(function(value, key) {
+                $("#R_body").html("<p>" + value.title + "</p>");
+            })
+
+
+
+
+        });
         $("button").click(function() {
-            var name = $("#name").val();
-            var body = $("#body").val();
+            var title = $("#title").val();
+            var description = $("#body_text").val();
 
-            $.get("http://jsonplaceholder.typicode.com/posts", function(data, status) {
-                console.log(data);
-                alert("Data: " + data + "\nStatus: " + status);
 
-            });
 
             $.post("http://jsonplaceholder.typicode.com/posts", {
-                'name': name,
-                'body': body
+                'title': title,
+                'body': description
             }, function(data, status) {
-                alert("Data:" + data + "\nStatus:" + status);
+                $("#R_body").text(data.title + "---" + data.body);
+
             });
         });
     });
