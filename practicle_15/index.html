@@ -4,51 +4,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>practicle_15</title>
+    <title>Demo</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
 </head>
 
-<body>
+<br>
+<input type="text" id="name">
+<input type="text" id="body"> <br></br>
+<button>Submit</button>
 
+<script>
+    $(document).ready(function() {
+        $("button").click(function() {
+            var name = $("#name").val();
+            var body = $("#body").val();
 
-    <div id="div1">
-        <h2>Let Change This Text</h2>
-    </div>
-    <button id="button">Get External Content</button>
-    <div id="div2">change world</div>
+            $.get("http://jsonplaceholder.typicode.com/posts", function(data, status) {
+                console.log(data);
+                alert("Data: " + data + "\nStatus: " + status);
 
-    <button id="button1">Data</button>
-    <script>
-        $(document).ready(function() {
-            $("button").click(function() {
-                $("#div1").load("document.txt", function(responseTxt, statusTxt, xhr) {
-                    if (statusTxt == "success")
-                        alert("External content loaded successfully!");
-                    if (statusTxt == "error")
-                        alert("Error: " + xhr.status + ": " + xhr.statusText);
-                });
             });
-
-
-            $.get(" http://jsonplaceholder.typicode.com/posts/1", function(data, status) {
-                alert(data);
-                alert(status);
-            });
-
 
             $.post("http://jsonplaceholder.typicode.com/posts", {
-                    name: "hello",
-                    city: "world"
-                },
-                function(data, status) {
-                    document.getElementById("div2").innerHTML = data;
-                    document.getElementById("button1").innerHTML = "data Passed";
-                    alert(data);
-                    alert(status);
-                });
+                'name': name,
+                'body': body
+            }, function(data, status) {
+                alert("Data:" + data + "\nStatus:" + status);
+            });
         });
-    </script>
-
+    });
+</script>
 </body>
 
 </html>
