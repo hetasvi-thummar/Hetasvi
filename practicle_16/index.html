@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <title>Practicle_15</title>
+    <title>Practicle_16</title>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -58,42 +58,39 @@
 
     <script>
         $(document).ready(function() {
-            $('#Alldata').empty();
+
+            function filldata(data) {
+                $('#Alldata').empty();
+                $.each(data, function(value, key) {
+                    var bgcolor = 'blue';
+                    if (value % 2 == 0) {
+                        bgcolor = 'yellow';
+                    }
+                    var all = '<tr style="background-color:' + bgcolor + '"><td>' + key.userId + '</td><td>' + key.id + '</td><td>' + key.title + '</td><td>' + key.body + '</td></tr>';
+                    $('#Alldata').append(all);
+                });
+            }
 
             $("#All_data").click(function() {
                 $.get("https://jsonplaceholder.typicode.com/posts", function(data, status) {
-
-                    $.each(data, function(value, key) {
-                        var All = '<tr><td>' + key.userId + '</td><td>' + key.id + '</td><td>' + key.title + '</td><td>' + key.body + '</td></tr>';
-                        $('#Alldata').append(All);
-                    });
+                    filldata(data);
                 });
             });
 
             $("#Last_10").click(function() {
-                $('#Alldata').empty();
-
                 $.get("https://jsonplaceholder.typicode.com/posts", function(data, status) {
-                    var x = data.length
-                    for (var y = x - 10; y <= x; y++) {
-                        var z = '<tr><td>' + data[y]['userId'] + '</td><td>' + data[y]['id'] + '</td><td>' + data[y]['title'] + '</td><td>' + data[y]['body'] + '</td></tr>'
-                        $('#Alldata').append(z);
-                    }
+                    var data1 = data.slice(Math.max(data.length - 10, 1))
+                    filldata(data1);
                 });
             });
 
             $("#First_10").click(function() {
-                $('#Alldata').empty();
-
                 $.get("https://jsonplaceholder.typicode.com/posts", function(data, status) {
-                    var a = data.length = 10;
-
-                    for (var b = 0; b <= a; b++) {
-                        var c = '<tr><td>' + data[b]['userId'] + '</td><td>' + data[b]['id'] + '</td><td>' + data[b]['title'] + '</td><td>' + data[b]['body'] + '</td></tr>'
-                        $('#Alldata').append(c);
-                    }
+                    var data1 = data.slice(0, 10);
+                    filldata(data1);
                 });
             });
+
         });
     </script>
 
