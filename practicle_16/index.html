@@ -73,14 +73,22 @@
 
             $("#All_data").click(function() {
                 $.get("https://jsonplaceholder.typicode.com/posts", function(data, status) {
-                    filldata(data);
+                    var data2 = data.slice(0, 5);
+                    filldata(data2);
                 });
             });
 
             $("#Last_10").click(function() {
+
                 $.get("https://jsonplaceholder.typicode.com/posts", function(data, status) {
+
                     var data1 = data.slice(Math.max(data.length - 10, 1))
                     filldata(data1);
+
+                    if (data.length > 5) {
+                        alert('error');
+                    }
+
                 });
             });
 
