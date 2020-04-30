@@ -73,29 +73,35 @@
 
             $("#All_data").click(function() {
                 $.get("https://jsonplaceholder.typicode.com/posts", function(data, status) {
-                    var data2 = data.slice(0, 5);
-                    filldata(data2);
+                    var data = data.slice(0, 5);
+                    filldata(data);
                 });
             });
 
             $("#Last_10").click(function() {
 
                 $.get("https://jsonplaceholder.typicode.com/posts", function(data, status) {
+                    var data = data.slice(0, 5);
 
-                    var data1 = data.slice(Math.max(data.length - 10, 1))
-                    filldata(data1);
-
-                    if (data.length > 5) {
+                    if (data.length < 10) {
                         alert('error');
+                    } else {
+                        var data2 = data.slice(Math.max(data.length - 10, 1))
+                        filldata(data2);
                     }
-
                 });
             });
 
             $("#First_10").click(function() {
                 $.get("https://jsonplaceholder.typicode.com/posts", function(data, status) {
-                    var data1 = data.slice(0, 10);
-                    filldata(data1);
+                    var data = data.slice(0, 5);
+                    if (data.length < 10) {
+                        alert('error');
+                    } else {
+                        var data1 = data.slice(0, 10);
+                        filldata(data1);
+                    }
+
                 });
             });
 
